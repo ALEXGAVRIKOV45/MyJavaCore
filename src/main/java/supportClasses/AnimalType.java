@@ -2,6 +2,10 @@ package supportClasses;
 
 public enum AnimalType {
     WOLF("Волк"),
+    BEAR("Медведь"),
+    TIGER("Тигр"),
+    GIRAFFE("Жирафф"),
+    OSTRICH("Страус"),
     DEER("Олень");
     private final String type;
 

@@ -9,4 +9,9 @@ public class Wolf extends Animal {
     public Wolf(AnimalType wolf, String name, int age, AnimalStatus species) {
         super(wolf, name, age, species);
     }
+
+    @Override
+    public void getVoice() {
+        System.out.println("Вой");
+    }
 }
