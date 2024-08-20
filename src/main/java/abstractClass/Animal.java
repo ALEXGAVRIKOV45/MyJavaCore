@@ -1,8 +1,10 @@
 package abstractClass;
 
 import supportClasses.AnimalStatus;
+import supportClasses.AnimalType;
 
 public abstract class Animal {
+    private AnimalType type;
     private String name;
     private int age;
     private AnimalStatus species;
@@ -11,10 +13,16 @@ public abstract class Animal {
 
     }
 
-    public Animal(String name, int age, AnimalStatus species) {
+    public Animal(AnimalType type, String name, int age, AnimalStatus species) {
+        this.type = type;
         this.name = name;
         this.age = age;
         this.species = species;
+    }
+
+    @Override
+    public String toString() {
+        return "У нас есть: "+ this.type.getType() + " { Кличка = " + this.name + ", возраст = " + this.age + ", статус = " + this.species.getStatus() + "}";
     }
 
     public AnimalStatus getSpecies() {
